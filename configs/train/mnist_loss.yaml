@@ -10,14 +10,14 @@ debug_mode: false
 dataset:
   name: mnist_loss
   train_metric: avg_test_loss
-  path: "new_checkpoint_data/mnist"
-  num_test_runs: 0
+  path: "checkpoint_datasets/mnist"
+  num_test_runs: 500
   augment: true
   normalizer: openai
   openai_coeff: 4.185
   target_epoch_size: 100800
   max_train_runs: 1000000
-  num_workers: 2
+  num_workers: 1
 
 vis:
   freq: 20
