@@ -11,7 +11,7 @@ dataset:
   name: mnist_loss
   train_metric: avg_test_loss
   path: "checkpoint_datasets/mnist"
-  num_test_runs: 0
+  num_test_runs: 500
   augment: true
   normalizer: openai
   openai_coeff: 4.185
