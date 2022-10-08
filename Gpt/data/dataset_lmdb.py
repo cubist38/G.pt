@@ -24,7 +24,7 @@ class ParameterDataset(Dataset):
     dataset_name: str = "mnist_loss"                # Name of the dataset in tasks.py
     split: str = "train"                            # Split of the checkpoint dataset to use ("train" or "test")
     max_train_runs: int = 1000000                   # Maximum number of runs to train on (default: all)
-    num_test_runs: int = 10 #500                      # Number of runs in the test split
+    num_test_runs: int = 0 #500                      # Number of runs in the test split
     target_epoch_size: int = 806400                 # Amount of data to train on per-"epoch" (806400 is arbitrary)
     train_metric: str = "avg_test_loss"             # Conditional metric for G.pt
     min_step_spacing: int = 1                       # Minimum spacing between starting and future checkpoints
@@ -60,8 +60,6 @@ class ParameterDataset(Dataset):
             for run in lmdb_runs:
                 run_lmdb_path[run] = lmdb_path
         self.runs = list(run_lmdb_path.keys())
-        print(self.runs)
-        print(len(self.runs))
 
         # Perform the train/test split:
         assert self.split in ["train", "test"]
