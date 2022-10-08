@@ -493,7 +493,7 @@ def dump_cfg(cfg, out_dir):
 def main():
     parser = argparse.ArgumentParser(description="CIFAR-10 Training")
     parser.add_argument("--gpu", type=int, default=0)
-    parser.add_argument("--out_dir", type=str, default="checkpoint_datasets/mnist")
+    parser.add_argument("--out_dir", type=str, default="new_checkpoint_data/mnist")
     args = parser.parse_args()
     torch.cuda.set_device(args.gpu)
 
