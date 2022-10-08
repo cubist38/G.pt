@@ -514,10 +514,10 @@ def main():
     cfg = AttrDict({
         "base_lr": 0.1,
         "wd": 0.0005,
-        "max_epoch": 25,
+        "max_epoch": 5,
         "mb_size": 128,
         "job_dir": job_dir,
-        "num_save": 200
+        "num_save": 10
     })
     dump_cfg(cfg, job_dir)
 

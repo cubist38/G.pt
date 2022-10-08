@@ -124,7 +124,7 @@ def train(cfg):
     """Performs the full training loop."""
 
     # Set up the environment
-    seed = setup_env(cfg)
+    #seed = setup_env(cfg)
 
     # Instantiate visualization objects (they will be fully-initialized later on)
     vis_monitor = VisMonitor(
