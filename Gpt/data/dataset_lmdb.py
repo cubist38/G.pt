@@ -60,6 +60,8 @@ class ParameterDataset(Dataset):
             for run in lmdb_runs:
                 run_lmdb_path[run] = lmdb_path
         self.runs = list(run_lmdb_path.keys())
+        print(self.runs)
+        print(len(self.runs))
 
         # Perform the train/test split:
         assert self.split in ["train", "test"]
